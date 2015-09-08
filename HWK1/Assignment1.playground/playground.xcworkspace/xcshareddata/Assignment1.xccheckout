@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0399F739-C449-44F8-89B3-DAC552B6C59E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Assignment1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F57E8F95ABCB9E300E2A873E8E8353623CBDDEC3</key>
+		<string>github.com:FredLoh/CSCI-2824-Discrete-Structures.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HWK1/Assignment1.playground</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F57E8F95ABCB9E300E2A873E8E8353623CBDDEC3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:FredLoh/CSCI-2824-Discrete-Structures.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F57E8F95ABCB9E300E2A873E8E8353623CBDDEC3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F57E8F95ABCB9E300E2A873E8E8353623CBDDEC3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CSCI%202824%20Discrete%20Structures</string>
+		</dict>
+	</array>
+</dict>
+</plist>
