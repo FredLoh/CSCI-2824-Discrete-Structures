@@ -19,7 +19,7 @@ struct guess {
 var arrayOfRules = [rules]()
 var guessArray = [guess]()
 
-//begin shitshow of for loops
+//Generate all possible answers
 for var a=0;a<=5;++a {
     for var b=0;b<=5;++b {
         for var c=0;c<=5;++c {
@@ -115,3 +115,86 @@ for var a=0;a<guessArray.count;++a {
 /* The program outputs Yellow Orange Red Orange and Yellow Orange Red Red as the two possibilities
 We know that YORR is not a possibility since the third guess only returned three white slots and
 not 4. */
+
+
+var secondArrayOfRules = [rules]()
+var secondGuessArray = [guess]()
+
+//Generate all possible answers
+for var a=0;a<=5;++a {
+    for var b=0;b<=5;++b {
+        for var c=0;c<=5;++c {
+            for var d=0;d<=5;++d {
+                var currentGuess = guess(slot1: a, slot2: b, slot3: c, slot4: d)
+                secondGuessArray.append(currentGuess)
+            }
+        }
+    }
+}
+secondGuessArray.count
+//Blue Orange Red Yellow Purple White
+// 0 1 2 3 4 5
+
+for var a=0;a<secondGuessArray.count;++a {
+    if secondGuessArray[a].slot1 == 1 && (secondGuessArray[a].slot2 == 3 || secondGuessArray[a].slot3 == 4 || secondGuessArray[a].slot4 == 2) {
+        continue
+    } else if secondGuessArray[a].slot2 == 3 && (secondGuessArray[a].slot3 == 4 || secondGuessArray[a].slot4 == 2) {
+        continue
+    } else if secondGuessArray[a].slot3 == 4 && secondGuessArray[a].slot4 == 2 {
+        continue
+    } else {
+        secondGuessArray.removeAtIndex(a)
+        a--
+    }
+}
+secondGuessArray.count
+
+for var a=0;a<secondGuessArray.count;++a {
+    if (secondGuessArray[a].slot1 == 3  && (secondGuessArray[a].slot3 == 0 || secondGuessArray[a].slot4 == 0)) || (secondGuessArray[a].slot1 == 3  && (secondGuessArray[a].slot2 == 1 || secondGuessArray[a].slot4 == 1)) || (secondGuessArray[a].slot1 == 3  && (secondGuessArray[a].slot2 == 5 || secondGuessArray[a].slot3 == 5)) {
+        continue
+    } else if (secondGuessArray[a].slot2 == 0  && (secondGuessArray[a].slot3 == 3 || secondGuessArray[a].slot4 == 3)) || (secondGuessArray[a].slot2 == 0  && (secondGuessArray[a].slot1 == 1 || secondGuessArray[a].slot4 == 1)) || (secondGuessArray[a].slot2 == 0  && (secondGuessArray[a].slot1 == 5 || secondGuessArray[a].slot3 == 5)) {
+        continue
+    } else if (secondGuessArray[a].slot3 == 1  && (secondGuessArray[a].slot2 == 3 || secondGuessArray[a].slot4 == 3)) || (secondGuessArray[a].slot3 == 1  && (secondGuessArray[a].slot1 == 0 || secondGuessArray[a].slot4 == 0)) || (secondGuessArray[a].slot3 == 1  && (secondGuessArray[a].slot1 == 5 || secondGuessArray[a].slot2 == 5)) {
+        continue
+    } else if (secondGuessArray[a].slot4 == 5  && (secondGuessArray[a].slot2 == 3 || secondGuessArray[a].slot3 == 3)) || (secondGuessArray[a].slot4 == 5  && (secondGuessArray[a].slot1 == 0 || secondGuessArray[a].slot3 == 0)) || (secondGuessArray[a].slot4 == 5  && (secondGuessArray[a].slot1 == 1 || secondGuessArray[a].slot2 == 1)) {
+        continue
+    } else {
+        secondGuessArray.removeAtIndex(a)
+        a--
+    }
+}
+secondGuessArray.count
+//Blue Orange Red Yellow Purple White
+// 0 1 2 3 4 5
+//remove all possibilities that have colors in slots of the third guess, since we know that none of them are in
+//the right position.
+for var a=0;a<secondGuessArray.count;++a {
+    if (secondGuessArray[a].slot1 == 0 || secondGuessArray[a].slot2 == 5 || secondGuessArray[a].slot3 == 3 || secondGuessArray[a].slot4 == 3) {
+        secondGuessArray.removeAtIndex(a)
+        a--
+    } else if (secondGuessArray[a].slot2 == 0 || secondGuessArray[a].slot3 == 0 || secondGuessArray[a].slot4 == 0) && (secondGuessArray[a].slot1 == 5 || secondGuessArray[a].slot3 == 5 || secondGuessArray[a].slot4 == 5 || secondGuessArray[a].slot1 == 3 || secondGuessArray[a].slot2 == 3) {
+        secondGuessArray.removeAtIndex(a)
+        a--
+    } else if (secondGuessArray[a].slot1 == 5 || secondGuessArray[a].slot3 == 5 || secondGuessArray[a].slot4 == 5) && (secondGuessArray[a].slot2 == 0 || secondGuessArray[a].slot3 == 0 || secondGuessArray[a].slot4 == 0 || secondGuessArray[a].slot1 == 3 || secondGuessArray[a].slot2 == 3) {
+        secondGuessArray.removeAtIndex(a)
+        a--
+    } else if (secondGuessArray[a].slot1 == 3 || secondGuessArray[a].slot2 == 3) && (secondGuessArray[a].slot2 == 0 || secondGuessArray[a].slot3 == 0 || secondGuessArray[a].slot4 == 0 || secondGuessArray[a].slot1 == 5 || secondGuessArray[a].slot3 == 5 || secondGuessArray[a].slot4 == 5) {
+        secondGuessArray.removeAtIndex(a)
+        a--
+    }
+}
+
+for var a=0;a<secondGuessArray.count;++a {
+    if secondGuessArray[a].slot1 == 1 && secondGuessArray[a].slot2 == 0 && secondGuessArray[a].slot3 == 4 {
+        
+    } else {
+        secondGuessArray.removeAtIndex(a)
+        a--
+    }
+}
+secondGuessArray.count
+//Blue Orange Red Yellow Purple White
+// 0 1 2 3 4 5
+for var a=0;a<secondGuessArray.count;++a {
+    println("Slots in order are \(secondGuessArray[a].slot1) \(secondGuessArray[a].slot2) \(secondGuessArray[a].slot3) \(secondGuessArray[a].slot4)")
+}
