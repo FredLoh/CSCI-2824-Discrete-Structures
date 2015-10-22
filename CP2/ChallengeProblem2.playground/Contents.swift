@@ -12,6 +12,7 @@ of type int for input and output.  We then initialize the array and
 begin declaring our function.
 */
 var arrayOfProducts : Array = [Int]()
+
 struct solutions {
     var input : Int?
     var output : Int?

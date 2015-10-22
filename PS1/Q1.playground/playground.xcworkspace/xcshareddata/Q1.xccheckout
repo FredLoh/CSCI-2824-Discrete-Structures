@@ -5,20 +5,20 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>0399F739-C449-44F8-89B3-DAC552B6C59E</string>
+	<string>475069C5-39D4-4ADB-AC4A-0EFE9E635AFA</string>
 	<key>IDESourceControlProjectName</key>
-	<string>playground</string>
+	<string>Q1</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F57E8F95ABCB9E300E2A873E8E8353623CBDDEC3</key>
 		<string>github.com:FredLoh/CSCI-2824-Discrete-Structures.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HWK1/Assignment1.playground/playground.xcworkspace</string>
+	<string>PS1/Q1.playground</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F57E8F95ABCB9E300E2A873E8E8353623CBDDEC3</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:FredLoh/CSCI-2824-Discrete-Structures.git</string>
