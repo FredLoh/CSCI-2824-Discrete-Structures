@@ -1,5 +1,6 @@
 /* This code looks to change each element with all possible following elements and then recusivley invoke the function */
-/* We pipe the output into egrep with the following command: egrep -v -c -e "12|34|56|78"  ... This gives us the inverse count of all those that match the pattern given*/
+/* We pipe the output into egrep with the following command: egrep -v -c -e "12|34|56|78" ... This gives us the inverse count of all those that match the pattern given*/
+/* pipe into uniq -u to remove duplicates */
 #include <stdio.h>
 #include <string.h>
 
@@ -13,7 +14,6 @@ void swapValues(char *firstValue, char *secondValue) {
 }
 
 void permute(char *stringPointer, int start, int end) {
-  // printf("%s\n", stringPointer);
   int i;
   if (start == end){
     permNumber++;
@@ -29,7 +29,7 @@ void permute(char *stringPointer, int start, int end) {
 }
 
 int main() {
-  char str[] = "12345678";
+  char str[] = "ABCDEFGH";
   int n = strlen(str);
   permute(str, 0, n-1);
   return 0;
